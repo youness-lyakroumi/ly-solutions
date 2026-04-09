@@ -436,41 +436,20 @@
     .metric-icon { font-size: 2rem; margin-left: auto; opacity: 0.6; }
 
    /* ── TECH STACK ── */
-.tech-grid {
-  display: grid; 
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-
-.tech-item {
-  background: var(--glass); 
-  border: 1px solid var(--glass-border);
-  border-radius: 16px; 
-  padding: 1.5rem;
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
-  gap: 0.8rem; 
-  text-align: center; 
-  transition: all 0.3s;
-}
-
-/* 1. Reset font-size and ensure the logo container has a fixed size */
 .tech-logo { 
-  height: 40px; 
-  width: 40px; 
+  width: 32px;      /* Reduced from 40px to make it look sleeker */
+  height: 32px; 
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0.5rem; /* Space between logo and name */
 }
 
-/* 2. Add this rule to control the SVG/Image scaling */
 .tech-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* Optional: if an icon is hard to see on dark backgrounds, uncomment below: */
-  /* filter: brightness(0) invert(1); */
+  display: block;
 }
 
 /* ... keep the rest of your tech-item:hover, tech-name, and tech-cat as they are ... */
