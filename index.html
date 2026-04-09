@@ -556,67 +556,10 @@
     }
 
     /* ── TIMELINE / EXPERIENCE ── */
-    .exp-timeline {
-      position: relative; padding-left: 2rem;
-    }
-    .exp-timeline::before {
-      content: ''; position: absolute;
-      left: 19px; top: 0; bottom: 0; width: 1px;
-      background: linear-gradient(180deg, var(--cyan), var(--blue), transparent);
-    }
-    .exp-item {
-      display: grid; grid-template-columns: 46px 1fr;
-      gap: 1.5rem; margin-bottom: 2rem;
-    }
-    .exp-dot {
-      width: 46px; height: 46px;
-      background: var(--bg-dark); border: 1px solid var(--glass-border);
-      border-radius: 50%; display: flex; align-items: center;
-      justify-content: center; font-size: 0.9rem;
-      position: relative; z-index: 1; flex-shrink: 0;
-    }
-    .exp-glass {
-      background: var(--glass); border: 1px solid var(--glass-border);
-      border-radius: 20px; padding: 1.8rem 2rem;
-      backdrop-filter: blur(20px); transition: all 0.3s;
-    }
-    .exp-glass:hover { border-color: rgba(0,229,255,0.2); transform: translateX(4px); }
-    .exp-period { font-size: 0.68rem; font-weight: 600; color: var(--cyan); font-family: var(--mono); letter-spacing: 0.08em; margin-bottom: 0.4rem; text-transform: uppercase; }
-    .exp-role { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem; }
-    .exp-company { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 0.5rem; font-weight: 500; }
-    .exp-sub { font-size: 0.72rem; color: var(--text-muted); font-family: var(--mono); margin-bottom: 1rem; }
-    .exp-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-    .exp-list li { font-size: 0.85rem; color: var(--text-dim); padding-left: 1.2rem; position: relative; line-height: 1.6; font-weight: 300; }
-    .exp-list li::before { content: '›'; position: absolute; left: 0; color: var(--cyan); font-weight: 700; }
+    
 
     /* ── CERTIFICATIONS ── */
-    .certs-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
-    }
-    .cert-glass {
-      background: var(--glass); backdrop-filter: blur(20px);
-      border: 1px solid var(--glass-border);
-      border-radius: 18px; padding: 1.6rem;
-      display: flex; align-items: flex-start; gap: 1rem;
-      transition: all 0.3s; position: relative; overflow: hidden;
-    }
-    .cert-glass::before {
-      content: ''; position: absolute;
-      top: 0; left: 0; width: 3px; height: 0;
-      background: linear-gradient(180deg, var(--cyan), var(--blue));
-      transition: height 0.4s;
-    }
-    .cert-glass:hover { border-color: rgba(0,229,255,0.2); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
-    .cert-glass:hover::before { height: 100%; }
-    .cert-badge {
-      width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem;
-      background: rgba(0,229,255,0.08); border: 1px solid rgba(0,229,255,0.15);
-    }
-    .cert-vendor { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); font-family: var(--mono); margin-bottom: 0.3rem; }
-    .cert-name { font-size: 0.88rem; font-weight: 600; color: var(--text); line-height: 1.35; }
-
+   
     /* ── CONTACT ── */
     #contact {
       position: relative; z-index: 1;
@@ -1049,88 +992,8 @@
 </section>
 
 <!-- ══ EXPERIENCE ══ -->
-<section class="section-wrap" id="experience" style="position:relative;z-index:1;">
-  <div class="sec-eyebrow">Work History</div>
-  <h2 class="sec-title reveal">Experience</h2>
-  <p class="sec-sub reveal">A track record of delivering enterprise cloud and security solutions across diverse environments.</p>
-
-  <div class="exp-timeline">
-    <div class="exp-item reveal">
-      <div class="exp-dot">🛡</div>
-      <div class="exp-glass">
-        <div class="exp-period">Current Position</div>
-        <div class="exp-role">Cybersecurity Support Engineer</div>
-        <div class="exp-company">Arrow ECS · Hybrid</div>
-        <div class="exp-sub">// VMware Carbon Black — App Control &amp; CB Cloud</div>
-        <ul class="exp-list">
-          <li>Provide L1 and L2 technical and security support for Carbon Black App Control and Carbon Black Cloud.</li>
-          <li>Assist customers with troubleshooting implementation, configuration, and maintenance of enterprise endpoint security solutions.</li>
-          <li>Deliver comprehensive, integrated cybersecurity support across diverse client environments.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="exp-item reveal">
-      <div class="exp-dot">☁</div>
-      <div class="exp-glass">
-        <div class="exp-period">Mar 2022 — Present</div>
-        <div class="exp-role">Cloud Solutions Engineer &amp; Consultant</div>
-        <div class="exp-company">Dovecloud by LY Solutions</div>
-        <div class="exp-sub">// Azure Virtual Desktop Infrastructure</div>
-        <ul class="exp-list">
-          <li>Implemented Azure Virtual Desktop to optimize resource allocation and reduce operational costs.</li>
-          <li>Strengthened security through centralized management and robust security protocols.</li>
-          <li>Deployed OpenVPN server on Azure using Ubuntu Server for up to 10 secure concurrent users.</li>
-          <li>Configured VPC, subnets, and security groups for secure and efficient network operations.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="exp-item reveal">
-      <div class="exp-dot">⚙</div>
-      <div class="exp-glass">
-        <div class="exp-period">Mar 2023 — Present</div>
-        <div class="exp-role">Cloud Service Support</div>
-        <div class="exp-company">IMPELAB · Freelance</div>
-        <ul class="exp-list">
-          <li>Document procedures, configurations, and create training materials for users and IT staff.</li>
-          <li>Monitor system performance, ensure availability and reliability, troubleshoot issues as they arise.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="exp-item reveal">
-      <div class="exp-dot">📦</div>
-      <div class="exp-glass">
-        <div class="exp-period">Feb 2023 — Mar 2023</div>
-        <div class="exp-role">Cloud Solution Engineer</div>
-        <div class="exp-company">IMPELAB · Hybrid</div>
-        <div class="exp-sub">// Data Migration to Cloud</div>
-        <ul class="exp-list">
-          <li>Led migration of data from on-site servers to the cloud using SharePoint as the primary solution.</li>
-          <li>Automated migration processes via PowerShell and Power Automate, ensuring efficiency and accuracy.</li>
-          <li>Transferred critical data resulting in improved accessibility, enhanced security, and reduced costs.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ══ CERTIFICATIONS ══ -->
-<section class="section-wrap alt" id="certs" style="position:relative;z-index:1;">
-  <div style="max-width:1400px;margin:0 auto;">
-    <div class="sec-eyebrow">Credentials</div>
-    <h2 class="sec-title reveal">Certifications</h2>
-    <p class="sec-sub reveal">Industry-recognized credentials across Microsoft Azure, VMware, Cisco, and Cambridge English.</p>
-
-    <div class="certs-grid">
-      <div class="cert-glass reveal"><div class="cert-badge">🏅</div><div><div class="cert-vendor">Microsoft</div><div class="cert-name">Azure Security Engineer Associate · AZ-500</div></div></div>
-      <div class="cert-glass reveal"><div class="cert-badge">🏅</div><div><div class="cert-vendor">Microsoft</div><div class="cert-name">Azure Fundamentals · AZ-900</div></div></div>
-      <div class="cert-glass reveal"><div class="cert-badge">🏅</div><div><div class="cert-vendor">Microsoft</div><div class="cert-name">Azure Administrator Associate · AZ-104</div></div></div>
-      <div class="cert-glass reveal"><div class="cert-badge">🏅</div><div><div class="cert-vendor">VMware · Broadcom</div><div class="cert-name">Carbon Black App Control Technical Specialist</div></div></div>
-      <div class="cert-glass reveal"><div class="cert-badge">🏅</div><div><div class="cert-vendor">VMware · Broadcom</div><div class="cert-name">Carbon Black Cloud Endpoint Standard</div></div></div>
-      <div class="cert-glass reveal"><div class="cert-badge">🏅</div><div><div class="cert-vendor">Cisco Academy</div><div class="cert-name">R&amp;S — Routing and Switching (CCNA)</div></div></div>
-      <div class="cert-glass reveal"><div class="cert-badge">🏅</div><div><div class="cert-vendor">Cambridge University Press</div><div class="cert-name">Cambridge English Qualification C1 Advanced</div></div></div>
-    </div>
-  </div>
-</section>
 
 <!-- ══ CONTACT ══ -->
 <section id="contact" style="position:relative;z-index:1;">
