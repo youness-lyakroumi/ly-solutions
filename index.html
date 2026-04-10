@@ -72,53 +72,94 @@
 
     /* ── NAV ── */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
-      padding: 0 5rem; height: 72px;
-      display: flex; align-items: center; justify-content: space-between;
-      background: rgba(6,10,18,0.65);
-      backdrop-filter: blur(24px) saturate(1.5);
-      -webkit-backdrop-filter: blur(24px) saturate(1.5);
-      border-bottom: 1px solid var(--glass-border);
-    }
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 900;
+  padding: 0 5rem; 
+  height: 72px;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  background: rgba(6,10,18,0.65);
+  backdrop-filter: blur(24px) saturate(1.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  border-bottom: 1px solid var(--glass-border);
+}
     .nav-logo {
-      font-weight: 900; font-size: 1.3rem;
-      letter-spacing: -0.04em; color: var(--text);
-      text-decoration: none; display: flex; align-items: center; gap: 0.4rem;
-    }
-    .nav-logo .logo-ly {
-      background: linear-gradient(135deg, var(--cyan), var(--blue));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .nav-logo .logo-sol { color: var(--text); }
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-    .nav-links a {
-      font-size: 0.82rem; font-weight: 500;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      color: var(--text-dim); text-decoration: none;
-      transition: color 0.25s; position: relative;
-    }
-    .nav-links a::after {
-      content: ''; position: absolute;
-      bottom: -4px; left: 0; width: 0; height: 1px;
-      background: var(--cyan); transition: width 0.3s;
-    }
-    .nav-links a:hover { color: var(--cyan); }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-cta {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.55rem 1.4rem;
-      background: linear-gradient(135deg, var(--blue), var(--cyan));
-      border-radius: 100px; font-size: 0.78rem; font-weight: 700;
-      color: #fff; text-decoration: none; letter-spacing: 0.04em;
-      transition: all 0.25s;
-      box-shadow: 0 0 24px var(--blue-glow);
-    }
-    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 0 40px var(--blue-glow); }
-    .pill-dot {
-      width: 6px; height: 6px; background: #fff;
-      border-radius: 50%; animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  display: flex; 
+  align-items: center; 
+  text-decoration: none;
+}
+   .nav-logo .logo-wrapper {
+  height: 25px; 
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo .logo-wrapper img {
+  height: 100%;
+  width: auto;
+  display: block;
+  /* No filters added to preserve original logo colors */
+}
+
+/* ── NAV LINKS (The Menu Bar) ── */
+.nav-links { 
+  display: flex; 
+  gap: 2.5rem; 
+  list-style: none; 
+  margin: 0; 
+  padding: 0;
+}
+
+.nav-links a {
+  font-size: 0.82rem; 
+  font-weight: 500;
+  letter-spacing: 0.06em; 
+  text-transform: uppercase;
+  color: var(--text-dim); 
+  text-decoration: none;
+  transition: color 0.25s; 
+  position: relative;
+}
+
+.nav-links a::after {
+  content: ''; 
+  position: absolute;
+  bottom: -4px; 
+  left: 0; 
+  width: 0; 
+  height: 1px;
+  background: var(--cyan); 
+  transition: width 0.3s;
+}
+
+.nav-links a:hover { color: var(--cyan); }
+.nav-links a:hover::after { width: 100%; }
+
+/* ── NAV CTA (The Button) ── */
+.nav-cta {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 0.5rem;
+  padding: 0.55rem 1.4rem;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  border-radius: 100px; 
+  font-size: 0.78rem; 
+  font-weight: 700;
+  color: #fff; 
+  text-decoration: none; 
+  letter-spacing: 0.04em;
+  transition: all 0.25s;
+  box-shadow: 0 0 24px var(--blue-glow);
+}
+
+.nav-cta:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 0 40px var(--blue-glow); 
+}
 
     /* Hamburger */
     .nav-hamburger {
@@ -679,7 +720,9 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <span class="logo-ly">LY</span><span class="logo-sol"> Solutions</span>
+    <div class="logo-wrapper">
+      <img src="Picture1.svg" alt="LY Solutions">
+    </div>
   </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
